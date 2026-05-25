@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAG Assistant</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <span class="logo-icon">◈</span>
+          <span class="logo-text">RAG<em>chat</em></span>
+        </div>
+        <p class="sidebar-tagline">Knowledge-grounded AI</p>
+      </div>
+
+      <div class="sidebar-actions">
+        <button class="btn-new-chat" id="newChatBtn">
+          <span>＋</span> New Chat
+        </button>
+      </div>
+
+      <div class="sidebar-sessions" id="sessionList">
+        <!-- sessions rendered by JS -->
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="status-indicator" id="statusDot">
+          <span class="dot"></span>
+          <span class="status-text">Connecting…</span>
+        </div>
+        <p class="powered-by">Powered by Claude · RAG</p>
+      </div>
+    </aside>
+
+    <!-- Main area -->
+    <main class="chat-area">
+
+      <div class="chat-topbar">
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+        <span class="session-label" id="sessionLabel">Session: —</span>
+        <div class="topbar-meta" id="metaBar"></div>
+      </div>
+
+      <div class="messages-wrap" id="messagesWrap">
+        <div class="messages" id="messages">
+          <!-- welcome screen -->
+          <div class="welcome" id="welcomeScreen">
+            <div class="welcome-icon">◈</div>
+            <h1>How can I help you?</h1>
+            <p>Ask anything about accounts, billing, APIs, integrations, or troubleshooting.</p>
+            <div class="suggested-chips" id="suggestedChips">
+              <button class="chip" data-q="How do I reset my password?">Reset password</button>
+              <button class="chip" data-q="What subscription plans do you offer?">Subscription plans</button>
+              <button class="chip" data-q="How do I use the REST API?">API usage</button>
+              <button class="chip" data-q="How does offline mode work on mobile?">Offline mode</button>
+              <button class="chip" data-q="What integrations are supported?">Integrations</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-row">
+          <textarea
+            id="messageInput"
+            placeholder="Ask a question…"
+            rows="1"
+            maxlength="2000"
+          ></textarea>
+          <button class="send-btn" id="sendBtn" title="Send (Enter)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+        <p class="input-hint">Press <kbd>Enter</kbd> to send · <kbd>Shift+Enter</kbd> for new line</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Loading overlay -->
+  <div class="typing-indicator" id="typingIndicator" style="display:none">
+    <span></span><span></span><span></span>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
