@@ -43,7 +43,7 @@ env_path = ROOT / ".env"
 if not env_path.exists():
     print("\nERROR: .env file not found.")
     print("Fix:  copy .env.example .env   then add your ANTHROPIC_API_KEY")
-    sys.exit(1)
+    # sys.exit(1)
 
 from dotenv import load_dotenv
 load_dotenv(env_path)
