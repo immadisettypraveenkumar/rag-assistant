@@ -29,7 +29,7 @@ from app.vectorstore.store import VectorStore
 logger = logging.getLogger(__name__)
 
 TOP_K: int = int(os.getenv("TOP_K_CHUNKS", "3"))
-THRESHOLD: float = float(os.getenv("SIMILARITY_THRESHOLD", "0.35"))
+THRESHOLD: float = float(os.getenv("SIMILARITY_THRESHOLD", "0.15"))
 
 
 async def answer_question(
