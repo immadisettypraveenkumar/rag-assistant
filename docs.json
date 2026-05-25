@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Account & Password Management",
+    "content": "Users can reset their password by navigating to Settings > Security > Reset Password. You will receive a password reset email within 2 minutes. The link expires after 30 minutes. For security reasons, after 5 failed login attempts your account will be temporarily locked for 15 minutes. To unlock early, use the 'Forgot Password' option on the login page. We recommend using a password manager and enabling two-factor authentication (2FA) for maximum security. Passwords must be at least 12 characters and include uppercase, lowercase, numbers, and symbols."
+  },
+  {
+    "title": "Billing & Subscription Plans",
+    "content": "We offer three subscription tiers: Free, Pro ($19/month), and Enterprise ($99/month). The Free plan includes 5 projects and 1 GB storage. Pro plan includes unlimited projects, 50 GB storage, priority support, and advanced analytics. Enterprise plan includes everything in Pro plus custom integrations, dedicated support, SSO, audit logs, and SLA guarantees. Billing cycles are monthly or annually (annual billing saves 20%). You can upgrade, downgrade, or cancel anytime from Settings > Billing. Refunds are available within 14 days of purchase if you have not exceeded Free plan usage limits."
+  },
+  {
+    "title": "API Integration Guide",
+    "content": "Our REST API uses Bearer token authentication. Generate your API key from Settings > Developer > API Keys. The base URL is https://api.ourplatform.com/v2. All requests must include the header 'Authorization: Bearer YOUR_API_KEY'. Rate limits are 100 requests/minute for Free, 1000 requests/minute for Pro, and unlimited for Enterprise. The API supports JSON request and response bodies. Common endpoints: GET /users/me (profile), POST /projects (create project), GET /projects/:id (fetch project), DELETE /projects/:id (delete project). API keys can be scoped to read-only or read-write access. Rotate keys immediately if compromised."
+  },
+  {
+    "title": "Data Privacy & Security",
+    "content": "We are fully GDPR and CCPA compliant. All data is encrypted in transit using TLS 1.3 and at rest using AES-256 encryption. We conduct third-party security audits quarterly. You can export all your data in JSON or CSV format from Settings > Privacy > Export Data. To permanently delete your account and all associated data, go to Settings > Account > Delete Account. Data deletion is irreversible and completed within 30 days. We never sell your personal data to third parties. Our data centers are located in the US (primary), EU (Frankfurt), and Asia-Pacific (Singapore). You can choose your data residency region on Enterprise plans."
+  },
+  {
+    "title": "Team Collaboration & Permissions",
+    "content": "Teams can have unlimited members on Pro and Enterprise plans. Roles available: Owner (full control), Admin (manage members and settings), Editor (create and edit content), Viewer (read-only access). Invite team members via email from Settings > Team > Invite Members. Pending invitations expire after 7 days. Members can be removed anytime; their content will remain unless manually deleted. Workspace-level permissions override project-level permissions. Guests can be added to specific projects without joining the full workspace. Real-time collaboration is supported — multiple users can edit the same document simultaneously with live cursors."
+  },
+  {
+    "title": "File Storage & Management",
+    "content": "Supported file types include PDF, DOCX, XLSX, PNG, JPG, SVG, MP4, and ZIP archives. Maximum file size is 100 MB for Pro and 500 MB for Enterprise. Files are automatically versioned — up to 30 versions are stored. To restore a previous version, right-click any file and select 'Version History'. Deleted files go to Trash and are permanently deleted after 30 days. Use folders and tags to organize files. Advanced search supports filtering by file type, date, size, and tags. Files can be shared via a public link (with optional password protection and expiry date) or directly with team members."
+  },
+  {
+    "title": "Notifications & Alert Settings",
+    "content": "Customize notifications from Settings > Notifications. Available notification channels: email, in-app, Slack, and Microsoft Teams. You can set notification preferences per workspace and per project. Notification types include: new comments, task assignments, due date reminders, billing alerts, security alerts, and system updates. Do Not Disturb mode can be scheduled (e.g., disable notifications 10 PM – 8 AM). Security alerts (failed logins, new device sign-ins) cannot be disabled. Weekly digest emails summarize activity across all your projects. Mobile push notifications are available on iOS and Android apps."
+  },
+  {
+    "title": "Integrations & Third-Party Apps",
+    "content": "We support native integrations with: Slack, Microsoft Teams, GitHub, GitLab, Jira, Trello, Asana, Notion, Google Drive, Dropbox, Salesforce, HubSpot, Zapier, and Make (formerly Integromat). To connect an integration, go to Settings > Integrations and follow the OAuth flow. Integrations can be enabled per-workspace or per-project. Webhook support allows custom integrations — configure webhooks at Settings > Developer > Webhooks. Each webhook can subscribe to specific event types. Zapier integration unlocks 5000+ additional app connections. Enterprise customers can request custom integrations with dedicated API support."
+  },
+  {
+    "title": "Troubleshooting & Common Issues",
+    "content": "If the app is slow or unresponsive, try clearing your browser cache and cookies, then reload. For login issues, ensure cookies are enabled and you are not using a VPN that blocks our servers. If you receive a '403 Forbidden' error on API calls, check that your API key is valid and has not expired. A '429 Too Many Requests' error means you have hit the rate limit — wait 60 seconds before retrying. For file upload failures, check your file size and type. If real-time collaboration is not working, ensure WebSockets are not blocked by a firewall. Contact support if issues persist beyond 30 minutes. Status page: status.ourplatform.com."
+  },
+  {
+    "title": "Mobile App & Offline Mode",
+    "content": "Our mobile app is available on iOS (iOS 15+) and Android (Android 10+). Download from the App Store or Google Play Store. Mobile apps support offline mode — changes sync automatically when you reconnect. Offline mode caches the last 100 documents you accessed. Biometric authentication (Face ID, fingerprint) is supported on compatible devices. Mobile notifications are managed separately from desktop notifications. The mobile app supports dark mode and follows your system theme by default. App version updates are released monthly. If you experience sync issues after offline editing, go to Settings > Sync > Force Sync to manually trigger synchronization."
+  }
+]
