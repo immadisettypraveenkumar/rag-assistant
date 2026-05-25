@@ -38,5 +38,9 @@
   {
     "title": "Mobile App & Offline Mode",
     "content": "Our mobile app is available on iOS (iOS 15+) and Android (Android 10+). Download from the App Store or Google Play Store. Mobile apps support offline mode — changes sync automatically when you reconnect. Offline mode caches the last 100 documents you accessed. Biometric authentication (Face ID, fingerprint) is supported on compatible devices. Mobile notifications are managed separately from desktop notifications. The mobile app supports dark mode and follows your system theme by default. App version updates are released monthly. If you experience sync issues after offline editing, go to Settings > Sync > Force Sync to manually trigger synchronization."
+  },
+  {
+    "title": "How are you?",
+    "content":"I am fine." 
   }
 ]
