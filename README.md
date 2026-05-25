@@ -164,8 +164,8 @@ project/
 ```bash
 git clone https://github.com/<username>/rag-assistant
 cd rag-assistant
-python -m venv venv
-source venv/bin/activate       # Windows: venv\Scripts\activate
+python -m venv .venv
+source .venv/Scripts/activate       # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -179,7 +179,7 @@ cp .env.example .env
 ### 3. Run
 
 ```bash
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+python run.py
 ```
 
 Open **http://localhost:8000** in your browser.
@@ -220,7 +220,7 @@ curl -X POST http://localhost:8000/api/chat \
 1. Push repo to GitHub
 2. New Web Service → connect repo
 3. Build command: `pip install -r requirements.txt`
-4. Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+4. Start command: `python run.py`
 5. Add environment variable: `ANTHROPIC_API_KEY`
 
 ### Railway
@@ -240,7 +240,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "run.py"]
 ```
 
 ---
